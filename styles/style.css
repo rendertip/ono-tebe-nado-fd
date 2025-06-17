@@ -257,10 +257,8 @@ br {
 
 .footer__address {
     width: 100%;
-    /* justify-self: end; */
     font-style: normal;
     line-height: 24.4px;
-    /* margin: 0 3px 8px 0; */
     text-underline-offset: 4px;
 
 }
