@@ -136,7 +136,8 @@ br {
 
 .lots__card-list {
     display: flex;
-    justify-content: space-between;
+    gap: 25px;
+    /* justify-content: space-between; */
     list-style: none;
 }
 
