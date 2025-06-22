@@ -60,12 +60,12 @@ br {
     background-position: center;
 }
 
-.overlay::before {
-    content: "";
+.overlay {
     position: absolute;
     z-index: 0;
     inset: 0;
     background-color: rgb(0 0 0 / 0.6);
+    pointer-events: none;
 }
 .cover-title {
     position: relative;
@@ -138,16 +138,16 @@ br {
 
 .lots__card-list {
     display: flex;
-    justify-content: space-between;
+    gap: 25px;
     list-style: none;
     flex-wrap: wrap;
 
 }
 
 .lots__card-list-item {
-    position: relative;
+    /* position: relative; */
     width: 334px;
-    height: 596px;
+    min-height: 596px;
 }
 
 .lots__look-more-link {
@@ -162,8 +162,17 @@ br {
 }
 
 .card {
+    position: relative;
+    height: 100%;
+    width: 100%;
     background-size: cover;
     background-position: center;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    padding: 48px 40px;
 }
 
 .card__title {
@@ -172,7 +181,7 @@ br {
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: underline;
-    text-underline-offset: 2px;
+    text-underline-offset: 3px;
     color: white;
     line-height: 1.2em;
 }
@@ -186,12 +195,6 @@ br {
 }
 
 .card-link {
-  z-index: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100%;
-  padding: 48px 40px;
   text-decoration: none;
 }
 
@@ -251,7 +254,7 @@ br {
 
 .footer {
     display: grid;
-    padding: 0 50px;
+    padding: 0 50px 83px;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 70px;
     font-size: 18px;
